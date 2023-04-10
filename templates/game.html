@@ -28,9 +28,9 @@
         {% if guess == '' %}
         <div></div>
         {% elif guess == 'Not a Number' %}
-        <h3 class="bg-danger text-warning rounded py-5">You didn't enter a number</h3>
+        <h3 class="bg-danger text-warning rounded py-3">You didn't enter a number</h3>
         {% elif guess == number %}
-        <div class="border bg-success rounded py-5">
+        <div class="border bg-success rounded py-3">
             <h2 class="text-white">{{number}} is correct!</h2>
             <form action="/destroy_session">
                 <button class="btn btn-primary mb-2">Play again!</button>
@@ -41,13 +41,13 @@
             <form action="/destroy_session">
                 <button class="btn btn-primary mb-2">Play again!</button>
             </form>
-            <h3 class="bg-danger text-white rounded py-5">Sorry! You are out of Guesses!</h3>
+            <h3 class="bg-danger text-white rounded py-3">Sorry! You are out of Guesses!</h3>
         </div>
         {% elif guess > number %}
-        <h3 class="bg-success text-white rounded py-5">Guess is Too High</h3>
+        <h3 class="bg-success text-white rounded py-3">Guess is Too High</h3>
         <h5>You Guessed: {{guess}}</h5>
         {% else %}
-        <h3 class="bg-danger text-white rounded py-5">Guess is Too Low</h3>
+        <h3 class="bg-danger text-white rounded py-3">Guess is Too Low</h3>
         <h5>You Guessed: {{guess}}</h5>
         {% endif %}
         <form action="/game" method="POST" class="hidden">
